@@ -70,10 +70,6 @@ data = list(zip(converted_x_train, y_train))
 random.shuffle(data)
 x_data, y_data = zip(*data)
 
-# Преобразование данных в векторную форму
-x_data, y_data = np.array(x_data), np.array(y_data)
-converted_x_train = np.array(converted_x_train)
-
 # Создание модели нейронной сети с помощью TensorFlow. Нейронов на слоях 726-512-264-42. 3 выхода, 480 входов.
 model = keras.Sequential([
     tf.keras.layers.Input(shape=(480,)),
